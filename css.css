@@ -1,0 +1,78 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+.dashboard {
+  font-size: 20px;
+  width: 400px;
+  align-self: center;
+  text-align: left;
+  color: black;
+  text-transform: uppercase;
+  text-shadow: 2px 4px 4px burlywood;
+}
+.grid {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  align-self: center;
+  border-radius: 50%;
+  background: burlywood;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.moodColor {
+  width: 350px;
+  height: 350px;
+  margin: 25px;
+  border-radius: 50%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2)
+}
+  #eat,
+  #play {
+    border: none;
+    font-size: 18px;
+    background-color: burlywood;
+    padding: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    text-shadow: 2px 1px 2px #000000;
+}
+#eat {
+    position: relative;
+    right: 40%;
+  }
+  #play {
+    position: relative;
+    left: 42%;
+  }
+  #eat:hover,
+  #play:hover {
+  box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  #eat:active,
+  #play:active {
+    background: beige;
+  }
+
+.responsive {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  font-family: "VT323", monospace;
+}
+@media (max-width: 1600px) {
+  .responsive {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1000px) {
+  body {
+    background-color: lightgrey;
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+    background-color: lightcyan;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2D Tamagotchi Game</title>
+  <link rel="stylesheet" href="css.css" />
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="responsive">
+    <section class="dashboard">
+      <p>Pikachu: <span id="textUpdate"></span></p>
+      <p>level: <span id="level"></span></p>
+    </section>
+
+    <section class="grid">
+      <div class="moodColor" style="background-color: green;">
+        <span class="buttons">
+          <button id="eat" onclick="pikachu.eat()">Eat</button>
+          <button id="play" onclick="pikachu.play()">Play</button>
+      </div>
+  </div>
+  </section>
+  </div>
+
+  <script>
+    let pikachu = new Mascot();
+    const btnPlay = document.getElementById("play");
+    const btnEat = document.getElementById("eat");
+    const moods = document.querySelector('.moodColor');
+
+    btnPlay.addEventListener("click", function () {
+      document.getElementById("level").innerHTML = pikachu.level;
+      moodUpdate()
+    });
+    btnEat.addEventListener("click", function () {
+      document.getElementById("level").innerHTML = pikachu.level;
+      moodUpdate()
+    });
+
+    function moodUpdate() {
+      if (pikachu.mood instanceof Happy) {
+        moods.style.backgroundColor = "green";
+      }
+      if (pikachu.mood instanceof Bored) {
+        moods.style.backgroundColor = "yellow";
+      }
+      if (pikachu.mood instanceof Hungry) {
+        moods.style.backgroundColor = "red";
+      }
+    }
+
+  </script>
+</body>
+
+</html>
